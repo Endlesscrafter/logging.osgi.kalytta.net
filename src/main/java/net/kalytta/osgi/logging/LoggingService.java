@@ -1,15 +1,18 @@
 package net.kalytta.osgi.logging;
 
 public class LoggingService implements LoggingInterface {
+
     public void fatal(String module, String message) {
-        LogActivator.getLogger().fatal("[" + module + "] " + message);
+        LogActivator.getLogger().error("[" + module + "] FATAL " + message);
     }
 
     public void error(String module, String message) {
+
         LogActivator.getLogger().error("[" + module + "] " + message);
     }
 
     public void warn(String module, String message) {
+
         LogActivator.getLogger().warn("[" + module + "] " + message);
     }
 
@@ -24,4 +27,5 @@ public class LoggingService implements LoggingInterface {
     public void trace(String module, String message) {
         LogActivator.getLogger().trace("[" + module + "] " + message);
     }
+
 }
